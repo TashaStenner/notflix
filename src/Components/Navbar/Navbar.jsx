@@ -3,11 +3,11 @@ import React, { useState } from "react";
 const Navbar = (props) => {
   const { handleChange } = props;
   const [searchContents, changeSearchContents] = useState("film");
-  
+
   return (
     <nav className="navbar navbar-light bg-dark">
       <a className="navbar-brand text-danger font-weight-bold">Notflix</a>
-      <form className="form-inline">
+      <form className="form-inline" onSubmit={event => event.preventDefault()}>
         <input
           className="form-control mr-sm-2"
           type="search"
