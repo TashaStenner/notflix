@@ -11,34 +11,35 @@ function App() {
     fetch(`http://www.omdbapi.com/?apikey=6b41f752&s=${searchTerm}`)
       .then((result) => result.json())
       .then((result) => {
-        return setAllFilms(cleanFilmData(result.Search));
+        return setAllFilms(result.Search);
       })
       .catch((err) => console.log(err));
   };
 
-  const cleanFilmData = (films) => {
-    return films.map((film) => {
-      return { ...film, title: film.Title, img: film.Poster };
-    });
-  };
+  // const cleanFilmData = (films) => {
+  //   return films.map((film) => {
+  //     return { ...film, title: film.Title, img: film.Poster };
+  //   });
+  // };
 
   const handleChange = (value) => {
     clearTimeout(timer);
     setTimer(setTimeout(() => getFilms(value), 1000));
   };
 
-
-
   return (
-    <div >
+    <div>
       <Navbar handleChange={handleChange} />
-      {allFilms.map(film => {
-        return (
-          <div>
-            <Card img={film.img} title={film.title} />
-          </div>
-        );
-      })}
+      {console.log(allFilms)}
+      <section className=".d-flex">
+        {allFilms.map((film) => {
+          return (
+            <div>
+              <Card img={film.Poster} title={film.Title} year={film.Year} />
+            </div>
+          );
+        })}
+      </section>
     </div>
   );
 }
