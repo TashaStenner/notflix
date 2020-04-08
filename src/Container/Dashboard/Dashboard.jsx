@@ -8,17 +8,17 @@ const Dashboard = (props) => {
 
   const getFilmsJsx = () => {
     return allFilms ? (
-      <div className="container d-flex flex-row bd-highlight mb-3">
+      <div className={styles.container}>
         {allFilms.map((film) => {
           return (
-            <div>
+            <div className={styles.card}>
               <Card img={film.Poster} title={film.Title} year={film.Year} />
             </div>
           );
         })}
       </div>
     ) : (
-      <div className="container-fluid .d-inline-flex flex-row flex-wrap ">
+      <div className={styles.container}>
         <h2 className="mt-3 text-danger font-weight-bold p-3">Your Film does not exist</h2>
         <p className="font-weight-bold p-3">Please enter a film that does</p>
       </div>
@@ -26,7 +26,7 @@ const Dashboard = (props) => {
   };
 
   useEffect(() => {
-    getStartPage("ants")
+    getStartPage("300")
   },[]);
 
   return <>

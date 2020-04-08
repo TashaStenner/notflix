@@ -1,0 +1,15 @@
+.container {
+    width: 100vw; 
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    align-items: center;
+    justify-content: flex-start;
+
+    .card {
+        width: 20%;
+        margin: 34px;
+        overflow-x: hidden;
+    }
+}
