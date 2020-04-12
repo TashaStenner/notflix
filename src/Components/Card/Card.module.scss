@@ -1,0 +1,8 @@
+.dropDown {
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}

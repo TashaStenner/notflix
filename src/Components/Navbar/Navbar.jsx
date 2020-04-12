@@ -6,8 +6,11 @@ const Navbar = (props) => {
 
   return (
     <nav className="navbar navbar-light bg-dark">
-      <a className="navbar-brand text-danger font-weight-bold">Notflix</a>
-      <form className="form-inline" onSubmit={event => event.preventDefault()}>
+      <h2 className="h2 overflow-hidden text-danger font-weight-bold">Notflix</h2>
+      <form
+        className="form-inline"
+        onSubmit={(event) => event.preventDefault()}
+      >
         <input
           className="form-control mr-sm-2"
           type="search"

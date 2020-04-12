@@ -26,7 +26,7 @@ function App() {
     <div>
       <Navbar handleChange={handleChange} />
       {console.log(allFilms)}
-      <Dashboard allFilms={allFilms} getStartPage={getFilms} />
+      <Dashboard allFilms={allFilms} getStartPage={getFilms}  />
     </div>
   );
 }

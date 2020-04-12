@@ -1,15 +1,69 @@
 .container {
-    width: 100vw; 
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  justify-content: flex-start;
+
+  .card {
+    width: 90%;
+    margin: 34px;
     overflow-x: hidden;
+  }
+}
+
+.broken {
+  height: 100vh;
+  background-color: black;
+}
+
+@media only screen and (min-width: 375px) {
+  .container {
+    .card {
+      margin-left: 70px;
+      height: 90%;
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .container {
+    .card {
+      width: 100%;
+      margin-left: 160px;
+      height: 90%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
     display: flex;
     flex-wrap: wrap;
-    background-color: black;
-    align-items: center;
-    justify-content: flex-start;
-
     .card {
+      width: 40%;
+      margin: 34px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+      .card {
+        width: 30%;
+        margin: 14px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1100px) {
+    .container {
+      .card {
         width: 20%;
         margin: 34px;
-        overflow-x: hidden;
+      }
     }
-}
+  }

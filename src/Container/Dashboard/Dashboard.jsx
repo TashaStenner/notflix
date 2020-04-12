@@ -18,9 +18,9 @@ const Dashboard = (props) => {
         })}
       </div>
     ) : (
-      <div className={styles.container}>
+      <div className={ styles.broken}>
         <h2 className="mt-3 text-danger font-weight-bold p-3">Your Film does not exist</h2>
-        <p className="font-weight-bold p-3">Please enter a film that does</p>
+        <p className="text-light font-weight-bold p-3">Please enter a film that does</p>
       </div>
     );
   };
