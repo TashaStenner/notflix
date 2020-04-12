@@ -11,7 +11,7 @@ const Card = (props) => {
 
   useEffect(() => {
     getFilmDetails(title);
-  }, []);
+  });
 
   const getFilmDetails = (searchTerm) => {
     fetch(`http://www.omdbapi.com/?apikey=6b41f752&t=${searchTerm}`)
