@@ -14,7 +14,7 @@ function App() {
       .then((result) => {
         return setAllFilms(result.Search);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert("Oh no! there has been an error"));
   };
 
   const handleChange = (value) => {
