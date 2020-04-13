@@ -9,7 +9,7 @@ function App() {
   const [timer, setTimer] = useState(null);
 
   const getFilms = (searchTerm) => {
-    fetch(`http://www.omdbapi.com/?apikey=6b41f752&s=${searchTerm}`)
+    fetch(`https://www.omdbapi.com/?apikey=6b41f752&s=${searchTerm}`)
       .then((result) => result.json())
       .then((result) => {
         return setAllFilms(result.Search);

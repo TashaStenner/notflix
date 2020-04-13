@@ -14,7 +14,7 @@ const Card = (props) => {
   });
 
   const getFilmDetails = (searchTerm) => {
-    fetch(`http://www.omdbapi.com/?apikey=6b41f752&t=${searchTerm}`)
+    fetch(`https://www.omdbapi.com/?apikey=6b41f752&t=${searchTerm}`)
       .then((result) => result.json())
       .then((result) => {
         return (
